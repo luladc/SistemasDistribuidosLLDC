@@ -11,14 +11,14 @@ package comun;
 import java.io.Serializable;
 
 public class Cuenta implements Serializable {
-    private static final long serialVersionUID = 1L; // Recomendado para RMI
+    private static final long serialVersionUID = 1L; 
     
-    private Banco banco; // Enumerado (MERCANTIL, BCP)
-    private String nrocuenta; //
-    private String ci; //
-    private String nombres; //[cite: 1]
-    private String apellidos; //[cite: 1]
-    private Double saldo; //[cite: 1]
+    private Banco banco; 
+    private String nrocuenta; 
+    private String ci; 
+    private String nombres; 
+    private String apellidos; 
+    private Double saldo; 
 
     // Constructor
     public Cuenta(Banco banco, String nrocuenta, String ci, String nombres, String apellidos, Double saldo) {
@@ -30,7 +30,6 @@ public class Cuenta implements Serializable {
         this.saldo = saldo;
     }
 
-    // Aquí deben generar los Getters y Setters para cada atributo
     public Banco getBanco() { return banco; }
     public void setBanco(Banco banco) { this.banco = banco; }
 

@@ -38,7 +38,6 @@ public class JusticiaImpl extends UnicastRemoteObject implements IJusticia {
             procesarCadenaCuentas(Banco.MERCANTIL, respMercantil, ci, nombres, apellidos, cuentasEncontradas);
         }
 
-        // 2. Consultar Banco BCP (UDP)
         String respBCP = clienteBCP.consultar(ci);
         if (respBCP.startsWith("ERROR")) {
             logs.append("[BCP: ").append(respBCP).append("] ");
@@ -46,7 +45,6 @@ public class JusticiaImpl extends UnicastRemoteObject implements IJusticia {
             procesarCadenaCuentas(Banco.BCP, respBCP, ci, nombres, apellidos, cuentasEncontradas);
         }
 
-        // 3. Empaquetar resultado
         RespuestaCuenta respuesta = new RespuestaCuenta();
         respuesta.setCuentas(cuentasEncontradas);
 

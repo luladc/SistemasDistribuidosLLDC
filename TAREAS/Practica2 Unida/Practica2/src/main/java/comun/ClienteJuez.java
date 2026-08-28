@@ -23,9 +23,9 @@ public class ClienteJuez {
             
             System.out.println("--- Iniciando Emisión de Consulta Judicial ---");
             
-            String ci = "11021654"; //[cite: 1]
-            String nombres = "Juan Perez"; //[cite: 1]
-            String apellidos = "Segovia"; //[cite: 1]
+            String ci = "11021654"; 
+            String nombres = "Juan Perez"; 
+            String apellidos = "Segovia"; 
             
             System.out.println("Consultando CI: " + ci + " | " + nombres + " " + apellidos);
             

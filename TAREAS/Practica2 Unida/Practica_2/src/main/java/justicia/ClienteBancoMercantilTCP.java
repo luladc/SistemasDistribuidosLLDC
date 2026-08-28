@@ -14,13 +14,10 @@ public class ClienteBancoMercantilTCP {
     }
 
     public String consultar(String ci) {
-        // Enviar en dos pasos: 1. CI, 2. Operación[cite: 1]
         return enviarDobleLinea(ci, "buscar");
     }
 
     public String congelar(String nroCuenta, double monto) {
-        // Para que el servidor TCP de tu compañero avance, se envía el CI en la primera línea.
-        // Se asume el CI del caso de prueba obligatorio (11021654) para que la búsqueda interna coincida.
         return enviarDobleLinea("11021654", "congelar:" + nroCuenta + ":" + monto);
     }
 
@@ -31,7 +28,6 @@ public class ClienteBancoMercantilTCP {
             
             socket.setSoTimeout(4000);
             
-            // Obligatorio usar dos println() para que el BufferedReader del banco no se congele
             out.println(linea1); 
             out.println(linea2); 
             
