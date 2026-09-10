@@ -1,0 +1,8 @@
+justicia\ClienteBancoBCPUDP.class
+comun\Cuenta.class
+comun\RespuestaCuenta.class
+justicia\ServidorJusticiaMain.class
+justicia\ClienteBancoMercantilTCP.class
+comun\Banco.class
+comun\IJusticia.class
+justicia\JusticiaImpl.class
